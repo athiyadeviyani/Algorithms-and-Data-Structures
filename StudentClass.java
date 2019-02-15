@@ -71,30 +71,29 @@ public class StudentClass {
 
 		public void search() {
 			// CODE DONE
-			int n = this.text.length();
-			int m = this.pattern.length();
-			int[] pi = computePrefixFunction(this.pattern);
+			int n = textLen;
+			int m = patternLen;
+			int[] pi = computePrefixFunction(pattern);
 			int q = 0;
 
-			Queue Q = new Queue();
 
 			for (int i = 0; i < n; i++) {
 
-				while (q > 0 && (this.pattern.charAt(q) != this.text.charAt(i))) {
+				while (q > 0 && (pattern.charAt(q) != text.charAt(i))) {
 					q = pi[q - 1];
 				}
 				
-				if (this.pattern.charAt(q) == this.text.charAt(i)) {
+				if (pattern.charAt(q) == text.charAt(i)) {
 					q = q + 1;
 				}
 
 				if (q == m) {
-					Q.enqueue(i-m);
+					matchIndices.enqueue(i-m);
 					q = pi[q - 1];
 				}
 			}
 
-			return Q;
+			return matchIndices;
 
 		}
 	}
