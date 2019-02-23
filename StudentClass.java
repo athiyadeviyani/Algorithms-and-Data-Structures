@@ -23,7 +23,7 @@ public class StudentClass {
 		int k = 0;
 
 		for (int q = 1; q < m; q++) {
-			while (k > 0 && (pattern.charAt(k) != pattern.charAt(q)) {
+			while (k > 0 && (pattern.charAt(k) != pattern.charAt(q))) {
 				k = pi[k - 1];
 			} if (pattern.charAt(k) == pattern.charAt(q)) {
 				k = k + 1;
@@ -93,7 +93,7 @@ public class StudentClass {
 				}
 			}
 
-			return matchIndices;
+			// return matchIndices;
 
 		}
 	}
