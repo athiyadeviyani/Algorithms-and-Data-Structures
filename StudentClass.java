@@ -88,7 +88,7 @@ public class StudentClass {
 				}
 
 				if (q == m) {
-					matchIndices.enqueue(i-m);
+					matchIndices.enqueue(i-m+1);
 					q = pi[q - 1];
 				}
 			}

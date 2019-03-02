@@ -408,5 +408,14 @@ public class Matcher {
 			System.err.println(">> Illegal file format: Graph plotter has terminated unexpectedly.");
 		}
 	}
+
+	public static void main(String[] args) {
+		// set p to 10, set t to 100
+		//System.out.println(testPrefixFunction("adddcddag"));
+		//testKMPMatcher(10,10);
+		//getRuntimes(10,100,"matcherTimes.txt");
+		//getRatios(10,100,70000, "fRatios.txt");
+		plotRuntimes(0.011257, 0.008847, "matcherTimes.txt");
+	}
 	
 }
